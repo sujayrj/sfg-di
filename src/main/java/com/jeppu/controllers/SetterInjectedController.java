@@ -1,6 +1,7 @@
 package com.jeppu.controllers;
 
 import com.jeppu.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -11,6 +12,7 @@ public class SetterInjectedController {
         return greetingService;
     }
 
+    @Autowired
     public void setGreetingService(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
