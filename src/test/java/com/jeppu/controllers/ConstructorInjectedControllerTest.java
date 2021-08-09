@@ -1,16 +1,14 @@
 package com.jeppu.controllers;
 
-import com.jeppu.services.GreetingServiceImpl;
+import com.jeppu.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectedControllerTest {
     ConstructorInjectedController constructorInjectedController;
     @BeforeEach
     void setUp() {
-        constructorInjectedController = new ConstructorInjectedController(new GreetingServiceImpl());
+        constructorInjectedController = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test
