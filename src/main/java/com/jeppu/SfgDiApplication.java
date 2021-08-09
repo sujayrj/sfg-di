@@ -1,9 +1,6 @@
 package com.jeppu;
 
-import com.jeppu.controllers.ConstructorInjectedController;
-import com.jeppu.controllers.MyController;
-import com.jeppu.controllers.PropertyInjectedController;
-import com.jeppu.controllers.SetterInjectedController;
+import com.jeppu.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +15,6 @@ public class SfgDiApplication {
         PropertyInjectedController propertyInjectedController = context.getBean("propertyInjectedController", PropertyInjectedController.class);
         System.out.println(propertyInjectedController.getGreeting());
 
-
         System.out.println("-----------Setter");
         SetterInjectedController setterInjectedController = context.getBean("setterInjectedController", SetterInjectedController.class);
         System.out.println(setterInjectedController.getGreeting());
@@ -31,6 +27,9 @@ public class SfgDiApplication {
         MyController myController = context.getBean("myController", MyController.class);
         System.out.println(myController.sayHello());
 
-    }
+        System.out.println("-----------Spring Profile");
+        I18nController i18nController = context.getBean("i18nController", I18nController.class);
+        System.out.println(i18nController.sayHello());
 
+    }
 }
