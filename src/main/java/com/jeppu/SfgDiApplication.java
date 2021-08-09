@@ -13,8 +13,6 @@ public class SfgDiApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(SfgDiApplication.class, args);
-        MyController myController = context.getBean("myController", MyController.class);
-        System.out.println(myController.sayHello());
 
         System.out.println("-----------Property");
         PropertyInjectedController propertyInjectedController = context.getBean("propertyInjectedController", PropertyInjectedController.class);
@@ -28,6 +26,10 @@ public class SfgDiApplication {
         System.out.println("-----------Constructor");
         ConstructorInjectedController constructorInjectedController = context.getBean("constructorInjectedController", ConstructorInjectedController.class);
         System.out.println(constructorInjectedController.getGreeting());
+
+        System.out.println("-----------Primary");
+        MyController myController = context.getBean("myController", MyController.class);
+        System.out.println(myController.sayHello());
 
     }
 
