@@ -1,12 +1,12 @@
-package com.jeppu.controllers;
+package jeppu.sfg.controller;
 
-import com.jeppu.services.GreetingService;
+import jeppu.sfg.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class SetterInjectedController {
+public class SetterInjectionController {
     private GreetingService greetingService;
 
     public GreetingService getGreetingService() {
@@ -19,7 +19,7 @@ public class SetterInjectedController {
         this.greetingService = greetingService;
     }
 
-    public String getGreeting(){
+    public String sayHello(){
         return greetingService.sayGreeting();
     }
 }

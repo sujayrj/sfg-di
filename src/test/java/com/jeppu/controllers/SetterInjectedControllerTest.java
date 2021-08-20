@@ -1,11 +1,10 @@
 package com.jeppu.controllers;
 
-import com.jeppu.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class SetterInjectedControllerTest {
-
+    /*
     SetterInjectedController setterInjectedController;
 
     @BeforeEach
@@ -18,4 +17,5 @@ class SetterInjectedControllerTest {
     void getGreeting() {
         System.out.println(setterInjectedController.getGreeting());
     }
+    */
 }

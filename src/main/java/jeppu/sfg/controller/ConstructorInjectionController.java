@@ -1,17 +1,16 @@
-package com.jeppu.controllers;
+package jeppu.sfg.controller;
 
-import com.jeppu.services.GreetingService;
+import jeppu.sfg.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class I18nController {
-
+public class ConstructorInjectionController {
     private final GreetingService greetingService;
 
     @Autowired
-    public I18nController(@Qualifier("i18nService") GreetingService greetingService) {
+    public ConstructorInjectionController(@Qualifier("constructor") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

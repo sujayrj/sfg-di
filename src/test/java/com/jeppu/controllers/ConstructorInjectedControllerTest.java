@@ -1,10 +1,7 @@
 package com.jeppu.controllers;
 
-import com.jeppu.services.ConstructorGreetingService;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 class ConstructorInjectedControllerTest {
+    /*
     ConstructorInjectedController constructorInjectedController;
     @BeforeEach
     void setUp() {
@@ -15,4 +12,18 @@ class ConstructorInjectedControllerTest {
     void getGreeting() {
         System.out.println(constructorInjectedController.getGreeting());
     }
+
+
+    ConstructorInjectedController constructorInjectionController;
+
+    @BeforeEach
+    void setUp() {
+        constructorInjectionController = new ConstructorInjectedController(new ConstructorInjectedGreetingService() );
+    }
+
+    @Test
+    void getGreeting() {
+        System.out.println(constructorInjectionController.sayHello());
+    }
+    */
 }
